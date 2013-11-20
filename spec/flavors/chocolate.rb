@@ -1,0 +1,4 @@
+@name = "chocolate"
+@calories = 150
+@color = :brown
+@price = 15.5
