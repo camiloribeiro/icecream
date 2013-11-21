@@ -13,7 +13,7 @@ describe "Parser" do
       .should == "chocolate"
     end
     it "Gets the name of the future object" do
-      @parser.get_flavor_name
+      @parser.get_flavor_name.should == "chocolate"
     end
   end
 end
