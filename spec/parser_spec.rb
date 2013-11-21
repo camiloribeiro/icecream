@@ -8,7 +8,6 @@ describe "Parser" do
     it "Reading the file" do
       obj = @parser.read
       obj.class.should be Chocolate
-#      obj.name.should be "chocolate"
     end
     it "Gets the string between two strings" do
       @parser.slice_between_strings("/super/flavors/chocolate.flavor", "/flavors/", ".flavor")
