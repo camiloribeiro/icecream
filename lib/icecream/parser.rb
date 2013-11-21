@@ -2,33 +2,31 @@
 module IceCream
   class Parser
 
-    def initialize(path)
-      read path
-    end
-
-    def get_flavor_name path
-        title = slice_between_strings(path, "/flavors/", ".flavor")
-    end
-
-    def read path
+    def self.get_flavor path
       all_particularities = File.read(path).split("\n").map
       objectify get_flavor_name(path), all_particularities
     end
 
-    def parse_variables particularity
+    private
+
+    def self.get_flavor_name path
+        title = slice_between_strings(path, "/flavors/", ".flavor")
+    end
+
+    def self.parse_variables particularity
       particularity.split("=").first.strip.to_s
     end
 
-    def parse_values particularity
+    def self.parse_values particularity
       particularity.split("=").last.strip
     end
-    def slice_between_strings(string, str_start, str_end)
+    def self.slice_between_strings(string, str_start, str_end)
       start_at = string.index(str_start).to_i + str_start.size
       end_at = string.index(str_end)
       string = string.slice start_at..end_at-1
     end
     
-    def fix_value value
+    def self.fix_value value
       #require "pry"; binding.pry
       if value[0] == ":"
         final = value.gsub(":","").to_sym 
@@ -45,9 +43,8 @@ module IceCream
       
     end
 
-    private
 
-    def objectify flavor, all_particularities
+    def self.objectify flavor, all_particularities
       class_name = flavor.capitalize
       klass = Object.const_set(class_name,Class.new)
       variables = all_particularities.each { | particularity | parse_variables particularity }
