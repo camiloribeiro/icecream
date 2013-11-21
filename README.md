@@ -29,15 +29,25 @@ And it is going to work in your non-rails as good as in your rails projects :D I
 
 
     .-"`'"-.
+
    /        \
+
    |        |
+
    /'---'--`\
+
   |          |
+
   \.--.---.-./
+
   (_.--._.-._)
+
     \=-=-=-/
+
      \=-=-/
+
       \=-/
+
        \/
 
 
