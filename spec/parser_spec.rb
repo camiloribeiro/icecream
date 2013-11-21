@@ -6,7 +6,9 @@ describe "Parser" do
       @parser = IceCream::Parser.new File.join(File.dirname(__FILE__),"../spec/flavors/chocolate.flavor")
     end
     it "Reading the file" do
-      @parser.read.should == "@name = \"chocolate\"\n@calories = 150\n@color = :brown\n@price = 15.5\n"
+      obj = @parser.read
+      obj.class.should be Chocolate
+#      obj.name.should be "chocolate"
     end
     it "Gets the string between two strings" do
       @parser.slice_between_strings("/super/flavors/chocolate.flavor", "/flavors/", ".flavor")
