@@ -32,6 +32,8 @@ describe "Parser" do
       # Int
       @parser.fix_value("15").should == 15
 
+      # Invalid conversions
+      @parser.fix_value("15s").should == ""
       
     end
   end

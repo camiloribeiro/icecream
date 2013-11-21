@@ -39,6 +39,8 @@ module IceCream
         final = value.to_f if Float(value) rescue false
       elsif !((Integer(value) rescue nil) == nil)
         final = value.to_i
+      else
+        final = ""
       end
       final
       
