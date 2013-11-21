@@ -3,17 +3,16 @@ module IceCream
   class Parser
 
     def initialize(path)
-      @path = path
-      @file = File.read path
+      read path
     end
 
-    def get_flavor_name
-        @title = slice_between_strings(@path, "/flavors/", ".flavor")
+    def get_flavor_name path
+        title = slice_between_strings(path, "/flavors/", ".flavor")
     end
 
-    def read
-      all_particularities = @file.split("\n").map
-      objectify get_flavor_name, all_particularities
+    def read path
+      all_particularities = File.read(path).split("\n").map
+      objectify get_flavor_name(path), all_particularities
     end
 
     def parse_variables particularity
