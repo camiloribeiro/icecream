@@ -17,5 +17,12 @@ describe "Parser" do
     it "Gets the name of the future object" do
       @parser.get_flavor_name.should == "chocolate"
     end
+    it "Returns the right type of the value" do
+      
+      # Strings
+      @parser.fix_value("\"chocolate\"").should == "chocolate"
+      @parser.fix_value("\"15\"").should == "15"
+      
+    end
   end
 end

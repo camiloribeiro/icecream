@@ -29,6 +29,10 @@ module IceCream
       string = string.slice start_at..end_at-1
     end
     
+    def fix_value value
+      value.gsub("\"","") if !value.slice("\"").nil?
+
+    end
 
     private
 
