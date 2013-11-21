@@ -35,6 +35,8 @@ module IceCream
         final = value.gsub(":","").to_sym 
       elsif !value.slice("\"").nil?
         final = value.gsub("\"","") 
+      elsif !value.slice(".").nil?
+        final = value.to_f if Float(value) rescue false
       end
       final
       
