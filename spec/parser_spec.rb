@@ -23,6 +23,8 @@ describe "Parser" do
       @parser.fix_value("\"chocolate\"").should == "chocolate"
       @parser.fix_value("\"15\"").should == "15"
       
+      #symbles
+      @parser.fix_value(":i15").should == :i15
     end
   end
 end

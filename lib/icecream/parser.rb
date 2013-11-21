@@ -30,8 +30,14 @@ module IceCream
     end
     
     def fix_value value
-      value.gsub("\"","") if !value.slice("\"").nil?
-
+      #require "pry"; binding.pry
+      if value[0] == ":"
+        final = value.gsub(":","").to_sym 
+      elsif !value.slice("\"").nil?
+        final = value.gsub("\"","") 
+      end
+      final
+      
     end
 
     private
