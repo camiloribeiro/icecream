@@ -16,13 +16,13 @@ The central idea is to have a very simple file to describe what you want to fabr
 This gem goes to the factory directory and for each file, it is going to create a class (with the file name) and fill this class with instance variables for each one of the variables, and, of course set the value for the variables :)
 
 Imagine a file called chocolate.flavor that has the following content
-  name = "Chocolate"
-  collor = :brown
-  calories = 150
-  price = 15.5
+-  name = "Chocolate"
+-  collor = :brown
+-  calories = 150
+-  price = 15.5
 
 At the end, you can call the IceCream factory using the following commands:
-  $ IceCream.flavor :chocolate
+    $ IceCream.flavor :chocolate
 
 and it is going to return a Chocolate (class) object called chocolate, with a string, a symble, a float and an integer. Easy ;)
 
