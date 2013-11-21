@@ -28,6 +28,9 @@ describe "Parser" do
 
       # Float
       @parser.fix_value("15.5").should == 15.5
+      
+      # Int
+      @parser.fix_value("15").should == 15
 
       
     end

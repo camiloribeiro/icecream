@@ -37,6 +37,8 @@ module IceCream
         final = value.gsub("\"","") 
       elsif !value.slice(".").nil?
         final = value.to_f if Float(value) rescue false
+      elsif !((Integer(value) rescue nil) == nil)
+        final = value.to_i
       end
       final
       
