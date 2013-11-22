@@ -44,6 +44,7 @@ Gemfile
 Using
 ---------
 
+    $ require 'icecream'
     $ creamy_flavors = IceCream::Icecream.new "/path/to/flavors"
     $ cheap_chocolate = creamy_flavors.flavor :chocolate
     $ cheap_chocolate.name= "whathever you want :)"
