@@ -11,9 +11,9 @@ It is a IceCream factory. It means that you can fabricate any IceCream flavor th
 
 The idea
 -------
-The central idea is to have a very simple file to describe what you want to fabricate. When I say simple, I mean SIMPLE. The file is just a file with two collums: variable and default value.
+The central idea is to have a very simple file to describe what you want to fabricate. When I say simple, I mean SIMPLE. The file is just a "file.flavor" (plain text) with two collums: variable and default value.
 
-This gem goes to the factory directory and for each file, it is going to create a class (with the file name) and fill this class with instance variables for each one of the variables, and, of course set the value for the variables :)
+This gem goes to the factory directory and for each ".flavor" file, it is going to create a class (with the file name) and fill this class with instance variables for each one of the variables, and, of course set the value for the variables :)
 
 Imagine a file called chocolate.flavor that has the following content
 
