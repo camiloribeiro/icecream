@@ -30,10 +30,36 @@ and it is going to return a Chocolate (class) object called chocolate, with a st
 
 And it is going to work in your non-rails as good as in your rails projects :D It is just ruby code, there is not one single dependency (so far).
 
+Installing
+------------------
 
+Terminal
+
+    $ gem install icecream
+
+Gemfile
+     
+    $ gem 'icecream'
+
+Using
+---------
+
+    $ creamy_flavors = IceCream::Icecream.new "/path/to/flavors"
+    $ cheap_chocolate = creamy_flavors.flavor :chocolate
+    $ cheap_chocolate.name= "whathever you want :)"
+    # You can have as many "factories" as you need
+    $ diet_flavors = IceCream::Icecream.new "/path/to/Diet/flavors"
+    $ zero_sugar_chocolate = diet_flavors.flavor :chocolate
+
+Have fun!
+
+Contributing
+--------------
+
+Fork, pull request, thank you :)
 
 LICENCE
-=======
+-------------
 
 Copyright 2013 Camilo Ribeiro camilo@camiloribeiro.com
 
