@@ -26,7 +26,7 @@ At the end, you can call the IceCream factory using the following commands:
    
     $ IceCream.flavor :chocolate
 
-and it is going to return a Chocolate (class) object called chocolate, with a string, a symble, a float and an integer. Easy ;)
+and it is going to return a Chocolate (class) object called chocolate, with a string, a symbol, a float and an integer. Easy ;)
 
 And it is going to work in your non-rails as good as in your rails projects :D It is just ruby code, there is not one single dependency (so far).
 
