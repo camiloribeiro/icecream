@@ -27,7 +27,6 @@ module IceCream
     end
     
     def self.fix_value value
-      #require "pry"; binding.pry
       if value[0] == ":"
         final = value.gsub(":","").to_sym 
       elsif !value.slice("\"").nil?
@@ -42,26 +41,24 @@ module IceCream
       final
       
     end
-
-
     def self.objectify flavor, all_particularities
       class_name = flavor.capitalize
       klass = Object.const_set(class_name,Class.new)
       variables = all_particularities.each { | particularity | parse_variables particularity }
       values = all_particularities.each { | particularity | parse_values particularity }
-    
+      
+
+      
       klass.class_eval do
         attr_accessor *variables
 
         define_method(:initialize) do
           variables.each_with_index do |variable_name,i|
-            instance_variable_set("@"+variable_name, values[i])
+            instance_variable_set("@"+variable_name, Parser.fix_value(values[i]))
           end
         end
       end
       obj = klass.new
     end
-
-
   end
 end

@@ -12,6 +12,7 @@ module IceCream
           "@"+instance_name
         end
         define_singleton_method(instance_name+"=") do |new_value|
+          require "pry"; binding.pry
           "@"+instance_name = new_value
         end
       end
