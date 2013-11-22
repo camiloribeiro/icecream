@@ -1,0 +1,4 @@
+name = "cream"
+calories = 200
+color = :yellow
+price = 17.5
