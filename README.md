@@ -3,8 +3,6 @@ IceCream
 
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
 
-!!!WORK IN PROGRESS!!!
-
 I was looking for a really simple factory gem, such as factory_grill, but without any magic to use with rails. I was incompetent at that, so I built this really simple Factory called IceCream.
 
 It is a IceCream factory. It means that you can fabricate any IceCream flavor that you have in your fridge :D And, as any Factory, you can change the properties of an object that you got from the fridge.
