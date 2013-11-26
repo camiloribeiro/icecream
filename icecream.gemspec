@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Camilo Ribeiro"]
   s.email       = ["cribeiro@camiloribeiro.com"]
   s.homepage    = "http://github.com/camiloribeiro/icecream"
+  s.license     = "Apache 2.0"
   s.summary     = %q{Simple Factory to the ones who just wanna a factory}
   s.description = %q{Simple factory without any active record or external library. Just gem install and use!}
 
