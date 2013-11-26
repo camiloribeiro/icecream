@@ -1,7 +1,11 @@
 IceCream
 ==============
 
+[![Gem Version](https://badge.fury.io/rb/icecream.png)](http://badge.fury.io/rb/icecream)
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
+[![Dependency Status](https://gemnasium.com/camiloribeiro/icecream.png)](https://gemnasium.com/camiloribeiro/icecream)
+[![Code Climate](https://codeclimate.com/github/camiloribeiro/icecream.png)](https://codeclimate.com/github/camiloribeiro/icecream)
+[![Coverage Status](https://coveralls.io/repos/camiloribeiro/icecream/badge.png?branch=master)](https://coveralls.io/r/camiloribeiro/icecream)
 
 I was looking for a really simple factory gem, such as factory_grill, but without any magic to use with rails. I was incompetent at that, so I built this really simple Factory called IceCream.
 
