@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__),"../lib/icecream/parser")
+require File.dirname(__FILE__) + "/spec_helper"
 
 describe "Parser" do
   describe "Parsing a file into an array" do

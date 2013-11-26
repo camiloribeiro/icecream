@@ -1,3 +1,4 @@
 *.sw*
+/coverage
 Gemfile.lock
 *.gem

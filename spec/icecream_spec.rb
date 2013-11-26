@@ -1,4 +1,5 @@
 require File.join(File.dirname(__FILE__),"../lib/icecream/icecream")
+require File.dirname(__FILE__) + "/spec_helper"
 
 describe "Icecream" do
   describe "Gets all the objects to factory directory" do
