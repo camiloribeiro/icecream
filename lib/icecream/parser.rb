@@ -28,7 +28,7 @@ module IceCream
     
     def self.fix_value value
       if (value[0] == "[") && (value[-1, 1] == "]")
-        final = "array"
+        final = value.gsub("[","") .gsub("]","").split(",")
       elsif value[0] == ":"
         final = value.gsub(":","").to_sym 
       elsif !value.slice("\"").nil?
