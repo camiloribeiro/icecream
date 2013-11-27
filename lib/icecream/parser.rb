@@ -43,7 +43,14 @@ module IceCream
     end
     def self.objectify flavor, all_particularities
       class_name = flavor.capitalize
-      klass = Object.const_set(class_name,Class.new)
+
+      original_verbosity = $VERBOSE
+      $VERBOSE = nil
+
+      klass = klass || Object.const_set(class_name,Class.new)
+
+      $VERBOSE = original_verbosity
+
       variables = all_particularities.each { | particularity | parse_variables particularity }
       values = all_particularities.each { | particularity | parse_values particularity }
       
