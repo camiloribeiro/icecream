@@ -22,6 +22,7 @@ describe "Parser" do
       # Strings
       IceCream::Parser.fix_value("\"chocolate\"").should == "chocolate"
       IceCream::Parser.fix_value("\"15\"").should == "15"
+      IceCream::Parser.fix_value("'15'").should == "15"
       
       # Symbles
       IceCream::Parser.fix_value(":i15").should == :i15
