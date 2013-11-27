@@ -8,30 +8,29 @@ IceCream
 [![Coverage Status](https://coveralls.io/repos/camiloribeiro/icecream/badge.png)](https://coveralls.io/r/camiloribeiro/icecream)
 [![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
 
-I was looking for a really simple factory gem, such as factory_grill, but without any magic to use with rails. I was incompetent at that, so I built this really simple Factory called IceCream.
+I was looking for a really simple factory gem, such as factory_girl, but without any magic to use with rails. I was incompetent at that, so I built this really simple factory called IceCream.
 
-It is a IceCream factory. It means that you can fabricate any IceCream flavor that you have in your fridge :D And, as any Factory, you can change the properties of an object that you got from the fridge.
-
-The idea
+The Idea
 -------
+
 The central idea is to have a very simple file to describe what you want to fabricate. When I say simple, I mean SIMPLE. The file is just a "file.flavor" (plain text) with two collums: variable and default value.
 
-This gem goes to the factory directory and for each ".flavor" file, it is going to create a class (with the file name) and fill this class with instance variables for each one of the variables, and, of course set the value for the variables :)
+This gem goes to the factory directory and for each ".flavor" file, it creates a class (with the given file name) and fills this class with instance variables for each one of the values declared.
 
-Imagine a file called chocolate.flavor that has the following content
+Imagine a file called chocolate.flavor that has the following content:
 
     name = "Chocolate"
-    collor = :brown
+    colour = :brown
     calories = 150
     price = 15.5
 
-At the end, you can call the IceCream factory using the following commands:
+After that, you can call the IceCream factory using the following commands:
    
     $ IceCream.flavor :chocolate
 
 and it is going to return a Chocolate (class) object called chocolate, with a string, a symbol, a float and an integer. Easy ;)
 
-And it is going to work in your non-rails as good as in your rails projects :D It is just ruby code, there is not one single dependency (so far).
+It works in your non-Rails Ruby project as well. It's just Ruby code, and there is not a single dependency (so far).
 
 Installing
 ------------------
@@ -60,12 +59,12 @@ Have fun!
 Contributing
 --------------
 
-Fork, pull request, thank you :)
+Fork and send pull requests, as usual. Thank you! :)
 
 LICENCE
 -------------
 
-Copyright 2013 Camilo Ribeiro camilo@camiloribeiro.com
+Copyright 2013 Camilo Ribeiro <camilo@camiloribeiro.com>
 
 This file is part of IceCream.
 
