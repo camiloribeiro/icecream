@@ -12,6 +12,7 @@ describe "Icecream" do
       chocolate.color.should eq :brown
       chocolate.price.should eq 15.5
       chocolate.calories.should eq 150
+      chocolate.resumo.should eq ["chocolate", 150, :brown, 15.5]
 
       cream = @fridge.flavor :cream
       cream.class.should be Cream
