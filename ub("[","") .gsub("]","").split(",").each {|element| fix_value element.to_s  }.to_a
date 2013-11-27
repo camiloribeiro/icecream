@@ -1,0 +1,24 @@
+
+[1mFrom:[0m /home/camilo/git/icecream/lib/icecream/parser.rb @ line 31 IceCream::Parser.fix_value:
+
+    [1;34m29[0m: [32mdef[0m [1;36mself[0m.[1;34mfix_value[0m value
+    [1;34m30[0m:   [32mif[0m (value[[1;34m0[0m] == [31m[1;31m"[0m[31m[[1;31m"[0m[31m[0m) && (value[[1;34m-1[0m, [1;34m1[0m] == [31m[1;31m"[0m[31m][1;31m"[0m[31m[0m)
+ => [1;34m31[0m:     require [31m[1;31m"[0m[31mpry[1;31m"[0m[31m[0m; binding.pry
+    [1;34m32[0m:     final = value.gsub([31m[1;31m"[0m[31m[[1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m) .gsub([31m[1;31m"[0m[31m][1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).split([31m[1;31m"[0m[31m,[1;31m"[0m[31m[0m).each {|element| fix_value element.to_s  }.to_a
+    [1;34m33[0m:   [32melsif[0m value[[1;34m0[0m] == [31m[1;31m"[0m[31m:[1;31m"[0m[31m[0m
+    [1;34m34[0m:     final = value.gsub([31m[1;31m"[0m[31m:[1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m).to_sym 
+    [1;34m35[0m:   [32melsif[0m !value.slice([31m[1;31m"[0m[31m[1;35m\"[0m[31m[1;31m"[0m[31m[0m).nil?
+    [1;34m36[0m:     final = value.gsub([31m[1;31m"[0m[31m[1;35m\"[0m[31m[1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m) 
+    [1;34m37[0m:   [32melsif[0m (value[[1;34m0[0m] == [31m[1;31m"[0m[31m'[1;31m"[0m[31m[0m) && (value[[1;34m-1[0m, [1;34m1[0m] == [31m[1;31m"[0m[31m'[1;31m"[0m[31m[0m)
+    [1;34m38[0m:     final = value.gsub([31m[1;31m"[0m[31m'[1;31m"[0m[31m[0m,[31m[1;31m"[0m[31m[1;31m"[0m[31m[0m) 
+    [1;34m39[0m:   [32melsif[0m !value.slice([31m[1;31m"[0m[31m.[1;31m"[0m[31m[0m).nil?
+    [1;34m40[0m:     final = value.to_f [32mif[0m Float(value) [32mrescue[0m [1;36mfalse[0m
+    [1;34m41[0m:   [32melsif[0m !((Integer(value) [32mrescue[0m [1;36mnil[0m) == [1;36mnil[0m)
+    [1;34m42[0m:     final = value.to_i
+    [1;34m43[0m:   [32melse[0m
+    [1;34m44[0m:     final = [31m[1;31m"[0m[31m[1;31m"[0m[31m[0m
+    [1;34m45[0m:   [32mend[0m
+    [1;34m46[0m:   final
+    [1;34m47[0m: 
+    [1;34m48[0m: [32mend[0m
+

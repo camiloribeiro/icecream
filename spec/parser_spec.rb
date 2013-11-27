@@ -34,7 +34,7 @@ describe "Parser" do
       IceCream::Parser.fix_value("15").should == 15
 
       # array
-      IceCream::Parser.fix_value("['mimimi',:foo,15,20.5]").should == ["'mimimi'",":foo","15","20.5"]
+      IceCream::Parser.fix_value("['mimimi',:foo,15,20.5]").should == ["mimimi",:foo,15,20.5]
       
       # Invalid conversions
       IceCream::Parser.fix_value("15s").should == ""
