@@ -23,6 +23,10 @@ module IceCream
       end
     end
 
+    def self.merge flavor, comp_flavor
+       flavor.instance_variables.each {|variable| flavor.send("#{variable.to_s[1,variable.to_s.size-1]}=".to_sym, comp_flavor.send(variable[1,variable.size-1].to_sym)) if comp_flavor.instance_variables.include? variable.to_sym }
+    end
+
     def initialize(path)
       Dir.glob("#{path}/*.flavor") do |flavor_file_path|
         flavor = Parser.get_flavor flavor_file_path
