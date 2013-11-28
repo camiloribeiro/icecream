@@ -28,5 +28,9 @@ describe "Icecream" do
       apple.price.should eq 1.5
       apple.calories.should eq 1500
     end
+    it "creates a new flavor from an array" do
+      new_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', color = :orange, price = 35.5, calories = 3]"
+      new_flavor.should eq "Orange[name = 'orange', color = :orange, price = 35.5, calories = 3]"
+    end
   end
 end

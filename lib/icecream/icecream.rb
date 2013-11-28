@@ -3,6 +3,10 @@ require File.join(File.dirname(__FILE__),"./parser")
 module IceCream
   class IceCream
 
+    def self.flavor flavor_name, flavor_details
+      flavor_name.to_s + "" + flavor_details
+    end
+
     def initialize(path)
       Dir.glob("#{path}/*.flavor") do |flavor_file_path|
         flavor = Parser.get_flavor flavor_file_path
@@ -20,7 +24,7 @@ module IceCream
       def flavor flavor
         instance_variable_get ("@" + flavor.to_s).to_sym
       end
-
+      
     end
   end
 end
