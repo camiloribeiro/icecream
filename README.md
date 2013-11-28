@@ -46,6 +46,8 @@ Gemfile
 Using
 ---------
 
+You can have different folders (fridges) with different factories definitions as exemplified bellow:
+
     $ require 'icecream'
     $ creamy_flavors = IceCream::Icecream.new "/path/to/flavors"
     $ cheap_chocolate = creamy_flavors.flavor :chocolate
@@ -53,6 +55,10 @@ Using
     # You can have as many "factories" as you need
     $ diet_flavors = IceCream::Icecream.new "/path/to/Diet/flavors"
     $ zero_sugar_chocolate = diet_flavors.flavor :chocolate
+
+You can also, define an object from nowhere, creating it with a single line!
+
+    $ IceCream::IceCream.flavor :Orange, "[name = 'orange', color = :orange, price = 35.5, calories = 3]"
 
 Have fun!
 

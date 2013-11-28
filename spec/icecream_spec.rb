@@ -30,7 +30,11 @@ describe "Icecream" do
     end
     it "creates a new flavor from an array" do
       new_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', color = :orange, price = 35.5, calories = 3]"
-      new_flavor.should eq "Orange[name = 'orange', color = :orange, price = 35.5, calories = 3]"
+      new_flavor.class.should be Orange
+      new_flavor.name.should eq "orange"
+      new_flavor.color.should eq :orange
+      new_flavor.price.should eq 35.5
+      new_flavor.calories.should eq 3
     end
   end
 end
