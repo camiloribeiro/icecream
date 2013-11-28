@@ -42,6 +42,14 @@ describe "Icecream" do
       cream = @fridge.flavor :cream
       complementary_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', price = 35.5]"
       
+      new_cream = IceCream::IceCream.merge cream, complementary_flavor
+
+      cream = @fridge.flavor :cream
+      cream.class.should be Cream
+      cream.name.should eq "orange"
+      cream.color.should eq :yellow
+      cream.price.should eq 35.5
+      cream.calories.should eq 200
     end
   end
 end
