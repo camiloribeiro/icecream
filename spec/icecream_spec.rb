@@ -3,8 +3,10 @@ require File.dirname(__FILE__) + "/spec_helper"
 
 describe "Icecream" do
   describe "Gets all the objects to factory directory" do
-    it "has objects for each file in the factory filder" do
+    before(:each) do
       @fridge = IceCream::IceCream.new File.join(File.dirname(__FILE__),"flavors")
+    end
+    it "has objects for each file in the factory filder" do
 
       chocolate = @fridge.flavor :chocolate
       chocolate.class.should be Chocolate
@@ -35,6 +37,11 @@ describe "Icecream" do
       new_flavor.color.should eq :orange
       new_flavor.price.should eq 35.5
       new_flavor.calories.should eq 3
+    end
+    it "merges the objects" do
+      cream = @fridge.flavor :cream
+      complementary_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', price = 35.5]"
+      
     end
   end
 end
