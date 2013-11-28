@@ -60,6 +60,18 @@ You can also, define an object from nowhere, creating it with a single line!
 
     $ IceCream::IceCream.flavor :Orange, "[name = 'orange', color = :orange, price = 35.5, calories = 3]"
 
+If you are working with big sets of data, you can update information of an object with the information of another object using merge. For instance:
+    
+    $ chocolate = @fridge.flavor :chocolate
+    # it has: name => "chocolate", color => :brown, price => 15.5 and calories => 150.
+    
+    $ update = IceCream::IceCream.flavor :Update_chocolate, "[name = 'Dark Chocolate', price = 55.5]"
+    # you created a new object with part of the data that chocolate has
+
+    $ IceCream::IceCream.merge chocolate, update
+    $ chocolate
+    # returns: name => "Dark Chocolate", color => :brown, price => 55.5 and calories => 150.
+
 Have fun!
 
 Contributing
