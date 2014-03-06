@@ -1,10 +1,10 @@
-   _           ICECREAM
- ,' `,.       =============================
- >-.(__)
-(_,-' |
-  `.  |
-    `.|
-      ` 
+       _           ICECREAM
+     ,' `,.       =============================
+     >-.(__)
+    (_,-' |
+      `.  |
+        `.|
+          ` 
 [![Gem Version](https://badge.fury.io/rb/icecream.png)](http://badge.fury.io/rb/icecream)
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
 [![Dependency Status](https://gemnasium.com/camiloribeiro/icecream.png)](https://gemnasium.com/camiloribeiro/icecream)
