@@ -7,8 +7,8 @@ ICECREAM
 [![Coverage Status](https://coveralls.io/repos/camiloribeiro/icecream/badge.png)](https://coveralls.io/r/camiloribeiro/icecream)
 [![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
 
-        . , 
-         *      
+        . ,                “Without ice cream, there would be darkness and chaos.” 
+         *                              ― Don Kardong
     ` *~.|,~* '   
     '  ,~*~~* `     _            “Ice cream is happiness condensed.”
      ,* / \`* '    //                   ― Jessie Lane Adams
