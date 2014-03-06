@@ -1,5 +1,11 @@
 ICECREAM
 =======================================
+[![Gem Version](https://badge.fury.io/rb/icecream.png)](http://badge.fury.io/rb/icecream)
+[![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
+[![Dependency Status](https://gemnasium.com/camiloribeiro/icecream.png)](https://gemnasium.com/camiloribeiro/icecream)
+[![Code Climate](https://codeclimate.com/github/camiloribeiro/icecream.png)](https://codeclimate.com/github/camiloribeiro/icecream)
+[![Coverage Status](https://coveralls.io/repos/camiloribeiro/icecream/badge.png)](https://coveralls.io/r/camiloribeiro/icecream)
+[![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
         . , 
          *      
     ` *~.|,~* '   
@@ -13,12 +19,6 @@ ICECREAM
             \  /            “There were some problems only coffee and ice cream could fix.”
            __)(__                        ― Amal El-Mohtar, Steam-Powered: Lesbian Steampunk Stories
           '------`        
-[![Gem Version](https://badge.fury.io/rb/icecream.png)](http://badge.fury.io/rb/icecream)
-[![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
-[![Dependency Status](https://gemnasium.com/camiloribeiro/icecream.png)](https://gemnasium.com/camiloribeiro/icecream)
-[![Code Climate](https://codeclimate.com/github/camiloribeiro/icecream.png)](https://codeclimate.com/github/camiloribeiro/icecream)
-[![Coverage Status](https://coveralls.io/repos/camiloribeiro/icecream/badge.png)](https://coveralls.io/r/camiloribeiro/icecream)
-[![endorse](https://api.coderwall.com/camiloribeiro/endorsecount.png)](https://coderwall.com/camiloribeiro)
 
 I was looking for a really simple factory gem, such as factory_girl, but without any magic to use with rails. I was incompetent at that, so I built this really simple factory called IceCream.
 
