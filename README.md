@@ -3,15 +3,15 @@ ICECREAM
         . , 
          *      
     ` *~.|,~* '   
-    '  ,~*~~* `     _  
-     ,* / \`* '    //    
+    '  ,~*~~* `     _            “Ice cream is happiness condensed.”
+     ,* / \`* '    //                   ― Jessie Lane Adams
       ,* ; \,O.   //      
-          ,(:::)=//  
-         (  `~(###)       
-          %---'`"y       
+          ,(:::)=//    “... everyone knows that ice cream is worth the trouble of being cold.  
+         (  `~(###)             Like all things virtuous, you have to suffer to gain the reward.”
+          %---'`"y                      ― Brandon Sanderson, The Rithmatist
            \    /
-            \  /        
-           __)(__          
+            \  /            “There were some problems only coffee and ice cream could fix.”
+           __)(__                        ― Amal El-Mohtar, Steam-Powered: Lesbian Steampunk Stories
           '------`        
 [![Gem Version](https://badge.fury.io/rb/icecream.png)](http://badge.fury.io/rb/icecream)
 [![Build Status](https://secure.travis-ci.org/camiloribeiro/icecream.png)](http://travis-ci.org/camiloribeiro/icecream)
