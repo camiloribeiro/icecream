@@ -92,6 +92,8 @@ Contributing
 
 Fork and send pull requests, as usual. Thank you! :)
 
+IceCream ASCII art from: http://ascii.co.uk/art/icecream
+
 LICENCE
 -------------
 
