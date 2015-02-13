@@ -5,10 +5,10 @@ module IceCream
 
     def self.flavor flavor_name, flavor_details
       object = Parser.objectify flavor_name.to_s, flavor_details
-                                                                .gsub("[","")
-                                                                .gsub("]","")
-                                                                .split(",")
-                                                                .map
+      .gsub("[","")
+      .gsub("]","")
+      .split(",")
+      .map
     end
 
     private
@@ -24,9 +24,9 @@ module IceCream
     end
 
     def self.merge flavor, comp_flavor
-       flavor.instance_variables.each do |variable| 
-         flavor.send("#{variable.to_s[1,variable.to_s.size-1]}=".to_sym, comp_flavor.send(variable[1,variable.size-1].to_sym)) if comp_flavor.instance_variables.include? variable.to_sym 
-       end
+      flavor.instance_variables.each do |variable| 
+        flavor.send("#{variable.to_s[1,variable.to_s.size-1]}=".to_sym, comp_flavor.send(variable[1,variable.size-1].to_sym)) if comp_flavor.instance_variables.include? variable.to_sym 
+      end
     end
 
     def initialize(path)

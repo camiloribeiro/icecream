@@ -1,4 +1,3 @@
-
 module IceCream
   class Parser
 
@@ -10,7 +9,7 @@ module IceCream
     private
 
     def self.get_flavor_name path
-        title = slice_between_strings(path, "/flavors/", ".flavor")
+      title = slice_between_strings(path, "/flavors/", ".flavor")
     end
 
     def self.parse_variables particularity
@@ -20,12 +19,13 @@ module IceCream
     def self.parse_values particularity
       particularity.split("=").last.strip
     end
+    
     def self.slice_between_strings(string, str_start, str_end)
       start_at = string.index(str_start).to_i + str_start.size
       end_at = string.index(str_end)
       string = string.slice start_at..end_at-1
     end
-    
+
     def self.fix_value value
       if (value[0] == "[") && (value[-1, 1] == "]")
         final = value.gsub("[","") .gsub("]","").split(",").map {|element| fix_value element.strip  }
@@ -43,8 +43,9 @@ module IceCream
         final = ""
       end
       final
-      
+
     end
+    
     def self.objectify flavor, all_particularities
       class_name = flavor.capitalize
 
@@ -57,9 +58,7 @@ module IceCream
 
       variables = all_particularities.each { | particularity | parse_variables particularity }
       values = all_particularities.each { | particularity | parse_values particularity }
-      
-
-      
+     
       klass.class_eval do
         attr_accessor *variables
 
