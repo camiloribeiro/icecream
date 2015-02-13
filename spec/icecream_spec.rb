@@ -6,6 +6,11 @@ describe "Icecream" do
     before(:each) do
       @fridge = IceCream::IceCream.new File.join(File.dirname(__FILE__),"flavors")
     end
+
+    it "returns all flavors" do
+      @fridge.all.should eq [:@apple, :@chocolate, :@cream]
+    end
+
     it "has objects for each file in the factory filder" do
 
       chocolate = @fridge.flavor :chocolate
@@ -41,7 +46,7 @@ describe "Icecream" do
     it "merges the objects" do
       cream = @fridge.flavor :cream
       complementary_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', price = 35.5]"
-      
+
       IceCream::IceCream.merge cream, complementary_flavor
 
       cream.class.should be Cream

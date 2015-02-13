@@ -11,6 +11,10 @@ module IceCream
       .map
     end
 
+    def all
+      instance_variables
+    end
+
     private
     def self.create_instance instance_name, flavor, instance=nil
       instance = self if instance.nil?
