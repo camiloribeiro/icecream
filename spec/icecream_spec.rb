@@ -8,7 +8,7 @@ describe "Icecream" do
     end
 
     it "returns all flavors" do
-      @fridge.all.should eq [:@apple, :@chocolate, :@cream]
+      @fridge.all.should match_array [:@apple, :@chocolate, :@cream]
     end
 
     it "has objects for each file in the factory filder" do
