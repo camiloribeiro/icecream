@@ -8,7 +8,7 @@ describe "Icecream" do
     end
 
     it "returns all flavors" do
-      @fridge.all.should match_array [:@apple, :@chocolate, :@cream]
+      @fridge.all.should match_array [:@apple, :@chocolate, :@cream, :@acai]
     end
 
     it "has objects for each file in the factory filder" do
@@ -19,6 +19,7 @@ describe "Icecream" do
       chocolate.color.should eq :brown
       chocolate.price.should eq 15.5
       chocolate.calories.should eq 150
+      chocolate.extra_description.should eq "Super good"
       chocolate.resumo.should eq ["chocolate", 150, :brown, 15.5]
 
       cream = @fridge.flavor :cream
@@ -26,6 +27,7 @@ describe "Icecream" do
       cream.name.should eq "cream"
       cream.color.should eq :yellow
       cream.price.should eq 17.5
+      cream.extra_description.should eq "Cremousssss"
       cream.calories.should eq 200
 
       apple = @fridge.flavor :apple
@@ -33,8 +35,18 @@ describe "Icecream" do
       apple.name.should eq "apple"
       apple.color.should eq :red
       apple.price.should eq 1.5
+      apple.extra_description.should eq "health!"
       apple.calories.should eq 1500
+
+      apple = @fridge.flavor :acai
+      apple.class.should be Acai
+      apple.name.should eq "Açaí-the best flavor-ever"
+      apple.color.should eq ""
+      apple.price.should eq 20.5
+      apple.extra_description.should eq "Brazilian!"
+      apple.calories.should eq 10
     end
+    
     it "creates a new flavor from an array" do
       new_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', color = :orange, price = 35.5, calories = 3]"
       new_flavor.class.should be Orange
@@ -43,6 +55,7 @@ describe "Icecream" do
       new_flavor.price.should eq 35.5
       new_flavor.calories.should eq 3
     end
+    
     it "merges the objects" do
       cream = @fridge.flavor :cream
       complementary_flavor = IceCream::IceCream.flavor :Orange, "[name = 'orange', price = 35.5]"

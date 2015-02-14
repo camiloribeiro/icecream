@@ -1,0 +1,6 @@
+name = "Açaí-the best flavor-ever"
+calories = 10
+color = nil
+price = 20.5
+extra_description = "Brazilian!"
+resumo = ["acai", 10, :black, 20.5]

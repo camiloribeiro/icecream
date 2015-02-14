@@ -2,3 +2,4 @@ name = "apple"
 calories = 1500
 color = :red
 price = 1.5
+extra_description = "health!"

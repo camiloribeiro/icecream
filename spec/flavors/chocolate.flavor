@@ -2,4 +2,5 @@ name = "chocolate"
 calories = 150
 color = :brown
 price = 15.5
+extra_description = "Super good"
 resumo = ["chocolate", 150, :brown, 15.5]
