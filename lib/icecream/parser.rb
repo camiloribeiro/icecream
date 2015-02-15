@@ -13,13 +13,17 @@ module IceCream
     end
 
     def self.parse_variables particularity
-      particularity.split("=").first.strip.to_s
+      if particularity_is_valid? particularity 
+        particularity.split("=").first.strip.to_s
+      end
     end
 
     def self.parse_values particularity
-      particularity.split("=").last.strip
+      if particularity_is_valid? particularity 
+        particularity.split("=").last.strip
+      end
     end
-    
+
     def self.slice_between_strings(string, str_start, str_end)
       start_at = string.index(str_start).to_i + str_start.size
       end_at = string.index(str_end)
@@ -45,7 +49,7 @@ module IceCream
       final
 
     end
-    
+
     def self.objectify flavor, all_particularities
       class_name = flavor.capitalize
 
@@ -56,9 +60,9 @@ module IceCream
 
       $VERBOSE = original_verbosity
 
-      variables = all_particularities.each { | particularity | parse_variables particularity }
-      values = all_particularities.each { | particularity | parse_values particularity }
-     
+      variables = all_particularities.each { | particularity | parse_variables particularity }.compact
+      values = all_particularities.each { | particularity | parse_values particularity }.compact
+
       klass.class_eval do
         attr_accessor *variables
 
@@ -69,6 +73,13 @@ module IceCream
         end
       end
       obj = klass.new
+    end
+    def self.particularity_is_valid? particularity
+      if (particularity.nil? ||  particularity.empty? || particularity.index("#")) 
+        false
+      else
+        true
+      end
     end
   end
 end

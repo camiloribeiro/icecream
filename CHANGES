@@ -1,4 +1,7 @@
 
+** 0.0.14
+ - Adding feature to ignore empty lines and to ignore lines with comments
+ 
 ** 0.0.13
  - Adding more tests
  - Adding change log
