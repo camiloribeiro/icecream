@@ -1,5 +1,9 @@
 name = "Açaí-the best flavor-ever"
 calories = 10
+
+
+
+# Should be a comment
 color = nil
 price = 20.5
 extra_description = "Brazilian!"
