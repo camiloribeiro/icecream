@@ -1,3 +1,6 @@
+#!/bin/env ruby
+## encoding: utf-8
+
 require File.join(File.dirname(__FILE__), './icecream/version')
 require 'rubygems'
 require 'bundler/setup'
