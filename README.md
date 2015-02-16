@@ -97,7 +97,7 @@ IceCream ASCII art from: http://ascii.co.uk/art/icecream
 LICENCE
 -------------
 
-Copyright 2013 Camilo Ribeiro <camilo@camiloribeiro.com>
+Copyright 2013 - 2015 Camilo Ribeiro <camilo@camiloribeiro.com>
 
 This file is part of IceCream.
 

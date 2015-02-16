@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name        = "icecream"
   s.version     = IceCream::VERSION
   s.authors     = ["Camilo Ribeiro"]
-  s.email       = ["cribeiro@camiloribeiro.com"]
+  s.email       = ["camilo@camiloribeiro.com"]
   s.homepage    = "http://github.com/camiloribeiro/icecream"
   s.license     = "Apache 2.0"
   s.summary     = %q{Simple Factory to the ones who just wanna a factory}
