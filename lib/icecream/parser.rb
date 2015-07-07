@@ -31,7 +31,9 @@ module IceCream
     end
 
     def self.fix_value value
-      if (value[0] == "[") && (value[-1, 1] == "]")
+      if (value[0] == "{") && (value[-1, 1] == "}")
+        final = value
+      elsif (value[0] == "[") && (value[-1, 1] == "]")
         final = value.gsub("[","") .gsub("]","").split(",").map {|element| fix_value element.strip  }
       elsif value[0] == ":"
         final = value.gsub(":","").to_sym 
