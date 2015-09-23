@@ -1,3 +1,5 @@
+require 'json'
+
 module IceCream
   class Parser
 
@@ -31,8 +33,8 @@ module IceCream
     end
 
     def self.fix_value value
-      if (value[0] == "{") && (value[-1, 1] == "}")
-        final = value
+      if (value[0] == "{" && JSON.parse(value))
+        final = JSON.parse(value)
       elsif (value[0] == "[") && (value[-1, 1] == "]")
         final = value.gsub("[","") .gsub("]","").split(",").map {|element| fix_value element.strip  }
       elsif value[0] == ":"
